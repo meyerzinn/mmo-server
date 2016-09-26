@@ -1,0 +1,29 @@
+namespace mmo;
+
+struct Vec2d {
+  x: int;
+  y: int;
+}
+
+enum WeaponType: byte {
+  Sword = 1
+}
+
+enum ShieldType: byte {
+  Normal = 1
+}
+
+table PositionComponent {
+  position: Vec2d;
+}
+
+union Component {}
+
+table ComponentInstance {
+  data: Component;
+}
+
+table Entity {
+  id: int;
+  components: [ComponentInstance];
+}
