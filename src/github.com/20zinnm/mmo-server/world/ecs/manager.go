@@ -3,7 +3,7 @@ package ecs
 import "sync"
 
 type EntityManager struct {
-	entities map[Entity]map[uint8]*Component
+	entities map[Entity]map[Component]interface{}
 	id       *int64
 	idLock   *sync.Mutex
 }

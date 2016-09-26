@@ -1,4 +1,3 @@
 package ecs
 
-type Component interface {
-}
+type Component byte

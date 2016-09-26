@@ -2,6 +2,7 @@ package systems
 
 import (
 	"../ecs"
+	"../components"
 )
 
 type NetworkingSystem struct {
@@ -10,7 +11,7 @@ type NetworkingSystem struct {
 
 func (sys *NetworkingSystem) Tick(_ int) {
 	for entity := range sys.Manager.GetEntities() {
-		if (sys.Manager.HasComponent(entity, byte(1))) {
+		if (sys.Manager.HasComponent(entity, components.CLIENT_COMPONENT)) {
 
 		}
 	}
